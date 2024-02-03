@@ -46,5 +46,8 @@ In a second instance, the hierarchical clustering algorithm was used, which does
 A comparison between the two models was conducted, and it was observed that both cluster the wines practically the same way.
 
 
+### 2.1 properties of each cluster
+
+![portada](assets/cluster_means_img.png)
 
 ## 3. Insights
