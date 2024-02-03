@@ -36,4 +36,15 @@ The following results were obtained:
 
 
 ## 2. Clustering Analysis
+
+With the aim of grouping wines with similar characteristics, unsupervised clustering models were implemented. First K-means algorithm was implemented, which requires the prior definition of the number of groups.
+
+To define it, the elbow rule was applied, identifying the inflection point on the inertia curve (sum of squared distances to the centroids) versus the number of clusters (k). It was determined that 3 clusters were optimal. This value was validated using Silhouette and Calinski-Harabasz metrics. As a result of this model, wines could be divided into three families, each with different properties.
+
+In a second instance, the hierarchical clustering algorithm was used, which does not require defining the number of clusters in advance.
+
+A comparison between the two models was conducted, and it was observed that both cluster the wines practically the same way.
+
+
+
 ## 3. Insights
