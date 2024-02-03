@@ -12,7 +12,7 @@ Patterns in the data will be sought to reveal valuable information and gain a de
 
 <!-- Imagen redimensionada centrada con estilos en línea -->
 <p align="center">
-  <img src="assets/wine_properties_img.png" width="400" height="400" alt="portada">
+  <img src="assets/wine_properties_img.png" width="300" height="400" alt="portada">
 </p>
 
 ## 1. Data exoloration
@@ -29,8 +29,12 @@ The following results were obtained:
 > #### The color intensity is positively correlated with the alcohol content of the wine. There is also a negative correlation between the color intensity of the wine and its hue. Wines with more intense colors have lower hue.
 > #### The OD280 is strongly correlated with flavonoid phenolic compounds. Also Wines with higher hues have a higher OD280 coefficient.
 
+<!-- Imagen redimensionada centrada con estilos en línea -->
+<p align="center">
+  <img src="assets/correlations_img.png" width="850" height="300" alt="portada">
+</p>
 
-
+![portada](assets/correlations_img.png)
 
 ## 2. Clustering Analysis
 ## 3. Insights
