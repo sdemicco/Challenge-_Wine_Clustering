@@ -31,10 +31,9 @@ The following results were obtained:
 
 <!-- Imagen redimensionada centrada con estilos en línea -->
 <p align="center">
-  <img src="assets/correlations_img.png" width="850" height="300" alt="portada">
+  <img src="assets/correlations_img.png" width="850" height="350" alt="portada">
 </p>
 
-![portada](assets/correlations_img.png)
 
 ## 2. Clustering Analysis
 ## 3. Insights
