@@ -96,13 +96,6 @@ In the overall dataset, it is observed that color intensity is primarily correla
 
 2. Clustering Analysis: Unsupervised clustering using K-means revealed three distinct clusters, confirmed by hierarchical clustering. Each cluster exhibited unique properties, notably varying in alcohol, phenols, flavonoids, and color intensity.
 
-Properties of Each Cluster
-* CLuser 0:
-High alcohol, phenols, Proline, and OD280.
-* Cluster 1:
-Low alcohol, phenols, Proline, and moderate OD280.<br>
-*Cluster 2:
-Moderate alcohol, high Maleic Acid, low phenols, low hue, high color intensity, and low OD280.
 3. Insights
 Exploring color intensity revealed its primary correlation with alcohol in the overall dataset. However, cluster analysis uncovered unique patterns, with Cluster 0 showing a strong correlation with phenols (especially flavonoids), Cluster 1 following a similar trend, and Cluster 2 correlating strongly with Proanthocyanins.
 
