@@ -12,7 +12,7 @@ Patterns in the data will be sought to reveal valuable information and gain a de
 
 <!-- Imagen redimensionada centrada con estilos en línea -->
 <p align="center">
-  <img src="assets/wine_properties_img.png" width="300" height="400" alt="portada">
+  <img src="assets/wine_properties_img.png" alt="portada">
 </p>
 
 ## 1. Data exoloration
@@ -31,7 +31,7 @@ The following results were obtained:
 
 <!-- Imagen redimensionada centrada con estilos en línea -->
 <p align="center">
-  <img src="assets/correlations_img.png" width="850" height="350" alt="portada">
+  <img src="assets/correlations_img_1.png" width="500" height="500" alt="portada">
 </p>
 
 
