@@ -48,6 +48,45 @@ A comparison between the two models was conducted, and it was observed that both
 
 ### 2.1 properties of each cluster
 
+
+In the boxplots, you can observe how the properties of the wines vary from one cluster to another.
+
+It is noticeable that the properties in which the clusters differ mainly are:
+
+Alcohol
+Total Phenols
+Flavanoids
+Color intensity
+
 ![portada](assets/cluster_means_img.png)
 
+
+### First Category:
+
+- High alcohol content
+- High levels of Phenols
+- Moderate color intensity
+- High Proline content
+- High OD280
+
+### Second Category:
+
+- Low alcohol content
+- Moderate levels of Phenols
+- Low color intensity
+- Low Proline content
+- Moderate OD280
+
+### Third Category:
+
+- Intermediate alcohol content
+- High Maleic Acid content
+- Low Phenols content
+- Low hue
+- Low OD280
+- High color intensity
+
+
 ## 3. Insights
+It was examinated how color intensity is related to the rest of the studied characteristics, both for the entire dataset and for each of the determined clusters. <br>
+In the overall dataset, it is observed that color intensity is primarily correlated with the alcohol content in the wine. The correlation coefficient did not show a high value for the total amount of phenols and flavonoids. However, when we repeat this analysis while discriminating by cluster, it is observed that wines corresponding to cluster 0 exhibit the highest correlation with phenol content, particularly with flavonoids. Analyzing the records of cluster 1, although they do not show such a strong correlation, it can be seen in the scatter plot that they follow the trend of cluster 0. In the case of cluster 2, the strong correlation with color intensity occurs with the content of Proanthocyanins and not with the content of flavonoids.
