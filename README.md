@@ -15,7 +15,7 @@ Patterns in the data will be sought to reveal valuable information and gain a de
   <img src="assets/wine_properties_img.png" alt="portada">
 </p>
 
-## 2. Data exploration
+## 2. Data Exploration
 
 The dataset had good quality. It did not contain missing data, so there was no need to perform imputations or transformations. It also did not exhibit erroneous or atypical values. A correlation analysis between variables was conducted. Due to the nature of the data, the Spearman correlation coefficient was chosen, which does not assume linearity between variables or that the features follow a normal distribution. P-values were also calculated to determine statistically significant correlations.
 
@@ -46,7 +46,7 @@ In a second instance, the hierarchical clustering algorithm was used, which does
 A comparison between the two models was conducted, and it was observed that both cluster the wines practically the same way.
 
 
-### 3.1 properties of each cluster
+### 3.1 Properties of each Cluster
 
 
 In the boxplots, it can be observed how the properties of the wines vary from one cluster to another.
@@ -61,7 +61,7 @@ Color intensity
 ![portada](assets/cluster_means_img.png)
 
 
-### First Category:
+### First Category (cluster 0):
 
 - High alcohol content
 - High levels of Phenols
@@ -69,7 +69,7 @@ Color intensity
 - High Proline content
 - High OD280
   
-### Second Category:
+### Second Category (cluster 1):
 
 - Low alcohol content
 - Moderate levels of Phenols
@@ -77,7 +77,7 @@ Color intensity
 - Low Proline content
 - Moderate OD280
 
-### Third Category:
+### Third Category (cluster 2):
 
 - Intermediate alcohol content
 - High Maleic Acid content
@@ -87,7 +87,7 @@ Color intensity
 - High color intensity
 
 
-### 3.2. Correlations after clustering
+### 3.2. Correlations after Clustering
 It was examinated how color intensity is related to the rest of the studied characteristics, both for the entire dataset and for each of the determined clusters. <br>
 In the overall dataset, it is observed that color intensity is primarily correlated with the alcohol content in the wine. The correlation coefficient did not show a high value for the total amount of phenols and flavonoids. However, when we repeat this analysis while discriminating by cluster, it is observed that wines corresponding to cluster 0 exhibit the highest correlation with phenol content, particularly with flavonoids. Analyzing the records of cluster 1, although they do not show such a strong correlation, it can be seen in the scatter plot that they follow the trend of cluster 0. In the case of cluster 2, the strong correlation with color intensity occurs with the content of Proanthocyanins and not with the content of flavonoids.
 
