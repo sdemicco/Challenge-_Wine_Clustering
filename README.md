@@ -15,7 +15,7 @@ Patterns in the data will be sought to reveal valuable information and gain a de
   <img src="assets/wine_properties_img.png" alt="portada">
 </p>
 
-## 2. Data exoloration
+## 2. Data exploration
 
 The dataset had good quality. It did not contain missing data, so there was no need to perform imputations or transformations. It also did not exhibit erroneous or atypical values. A correlation analysis between variables was conducted. Due to the nature of the data, the Spearman correlation coefficient was chosen, which does not assume linearity between variables or that the features follow a normal distribution. P-values were also calculated to determine statistically significant correlations.
 
