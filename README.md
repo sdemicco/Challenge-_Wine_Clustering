@@ -25,7 +25,7 @@ The following results were obtained:
 
 > ####  The content of Alcohol and Proline are positively correlated. As the alcohol content in a wine increases, the Proline content also increases.
 > #### The hue is negatively correlated with malic acid and positively correlated with flavonoids. Wines with lower values of malic acid and higher values of flavonoids exhibit higher hues.
-> #### Total_phenols is strongly correlated with Flavanoids and Proanthocyanins, which is expected since Flavanoids and Proanthocyanins are included in the total_phenols category.
+> #### Total_phenols is strongly correlated with Flavonoids and Proanthocyanins, which is expected since Flavonoids and Proanthocyanins are included in the total_phenols category.
 > #### The color intensity is positively correlated with the alcohol content of the wine. There is also a negative correlation between the color intensity of the wine and its hue. Wines with more intense colors have lower hue.
 > #### The OD280 is strongly correlated with flavonoid phenolic compounds. Also Wines with higher hues have a higher OD280 coefficient.
 
@@ -55,7 +55,7 @@ It is noticeable that the properties in which the clusters differ mainly are:
 
 Alcohol
 Total Phenols
-Flavanoids
+Flavonoids
 Color intensity
 
 ![portada](assets/cluster_means_img.png)
