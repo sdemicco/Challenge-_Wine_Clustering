@@ -109,7 +109,7 @@ In summary, this project successfully unveiled hidden profiles within wine data,
 ## 5 Containerization and Data Retrieval:
 
 ### Containerization
-:point_right: [readme containerization](Notebooks/wines_EDA.ipynb)
+:point_right: [readme containerization](DockerImage/README.md)
 
 A Docker image was generated to execute a Python script that performs an analysis, returning the following information:
 
@@ -119,7 +119,7 @@ A Docker image was generated to execute a Python script that performs an analysi
 :white_check_mark: K-Means Clustering : DataFrame with mean values of the features for each cluster<br>
 
 ### Data Retrieval
-
+:point_right: [main.py fastAPI](DockerImage/README.md)
 A simple REST API was developed and deployed with Render. Through this API, the script inside the container can access data via a request.
 ENDPOINT = "https://wine-data.onrender.com/wine"
 
