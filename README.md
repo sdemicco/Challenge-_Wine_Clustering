@@ -117,7 +117,7 @@ In summary, this project successfully unveiled hidden profiles within wine data,
 A Dockerfile and necessary configurations to build a Docker image were developed.<br> 
 :point_right: [readme containerization](DockerImage/README.md)
 
-The analysis includes:
+The analysis includes:<br>
 :white_check_mark: Number of rows and columns in the dataset<br>
 :white_check_mark: Number of null values<br>
 :white_check_mark: Columns correlated with a correlation coefficient higher than 0.5<br>
