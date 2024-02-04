@@ -17,7 +17,7 @@ Patterns in the data will be sought to reveal valuable information and gain a de
 
 ## 2. Data Exploration
 
-:point_right: [Notebook Analisis Exploratorio y modelo](Notebooks/wines_EDA.ipynb)
+:point_right: [Notebook](Notebooks/wines_EDA.ipynb)
 
 The dataset had good quality. It did not contain missing data, so there was no need to perform imputations or transformations. It also did not exhibit erroneous or atypical values. A correlation analysis between variables was conducted. Due to the nature of the data, the Spearman correlation coefficient was chosen, which does not assume linearity between variables or that the features follow a normal distribution. P-values were also calculated to determine statistically significant correlations.
 
@@ -39,7 +39,7 @@ The following results were obtained:
 
 ## 3. Clustering Analysis
 
-:point_right: [Notebook Analisis Exploratorio y modelo](Notebooks/wines_EDA.ipynb)
+:point_right: [Notebook](Notebooks/wines_EDA.ipynb)
 
 With the aim of grouping wines with similar characteristics, unsupervised clustering models were implemented. First K-means algorithm was implemented, which requires the prior definition of the number of groups.
 
@@ -119,7 +119,7 @@ A Docker image was generated to execute a Python script that performs an analysi
 :white_check_mark: K-Means Clustering : DataFrame with mean values of the features for each cluster<br>
 
 ### Data Retrieval
-:point_right: [main.py fastAPI](DockerImage/README.md)
+:point_right: [main.py fastAPI](main.py)<br>
 A simple REST API was developed and deployed with Render. Through this API, the script inside the container can access data via a request.
 ENDPOINT = "https://wine-data.onrender.com/wine"
 
