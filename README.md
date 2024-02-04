@@ -100,3 +100,21 @@ In the overall dataset, it is observed that color intensity is primarily correla
 Exploring color intensity revealed its primary correlation with alcohol in the overall dataset. However, cluster analysis uncovered unique patterns, with Cluster 0 showing a strong correlation with phenols (especially flavonoids), Cluster 1 following a similar trend, and Cluster 2 correlating strongly with Proanthocyanins.
 
 In summary, this project successfully unveiled hidden profiles within wine data, offering valuable insights into the dataset's relationships and patterns.
+
+
+## 5 Containerization and Data Retrieval:
+
+### Containerization
+
+A Docker image was generated to execute a Python script that performs an analysis, returning the following information:
+
+:white_check_mark: Number of rows and columns in the dataset<br>
+:white_check_mark: Number of null values<br>
+:white_check_mark: Columns correlated with a correlation coefficient higher than 0.5<br>
+:white_check_mark: DataFrame with mean values of the features for each cluster<br>
+
+### Data Retrieval
+
+A simple REST API was developed and deployed with Render. Through this API, the script inside the container can access data via a request.
+
+
