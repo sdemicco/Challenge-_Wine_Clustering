@@ -24,10 +24,10 @@ The following results were obtained:
 
 
 > ####  The content of Alcohol and Proline are positively correlated. As the alcohol content in a wine increases, the Proline content also increases.
-> #### The hue is negatively correlated with malic acid and positively correlated with flavonoids. Wines with lower values of malic acid and higher values of flavonoids exhibit higher hues.
+> #### The hue is negatively correlated with malic acid and positively correlated with flavanoids. Wines with lower values of malic acid and higher values of flavanoids exhibit higher hues.
 > #### Total_phenols is strongly correlated with Flavonoids and Proanthocyanins, which is expected since Flavonoids and Proanthocyanins are included in the total_phenols category.
 > #### The color intensity is positively correlated with the alcohol content of the wine. There is also a negative correlation between the color intensity of the wine and its hue. Wines with more intense colors have lower hue.
-> #### The OD280 is strongly correlated with flavonoid phenolic compounds. Also Wines with higher hues have a higher OD280 coefficient.
+> #### The OD280 is strongly correlated with flavanoid phenolic compounds. Also Wines with higher hues have a higher OD280 coefficient.
 
 <!-- Imagen redimensionada centrada con estilos en línea -->
 <p align="center">
@@ -55,7 +55,7 @@ It is noticeable that the properties in which the clusters differ mainly are:
 
 Alcohol
 Total Phenols
-Flavonoids
+Flavanoids
 Color intensity
 
 ![portada](assets/cluster_means_img.png)
@@ -64,7 +64,7 @@ Color intensity
 ### First Category (cluster 0):
 
 - High alcohol content
-- High levels of Phenols
+- High levels of Phenols,Flavanoids
 - Moderate color intensity
 - High Proline content
 - High OD280
@@ -72,7 +72,7 @@ Color intensity
 ### Second Category (cluster 1):
 
 - Low alcohol content
-- Moderate levels of Phenols
+- Moderate levels of Phenols,Flavanoids
 - Low color intensity
 - Low Proline content
 - Moderate OD280
@@ -81,7 +81,7 @@ Color intensity
 
 - Intermediate alcohol content
 - High Maleic Acid content
-- Low Phenols content
+- Low Phenols,Flavanoids content
 - Low hue
 - Low OD280
 - High color intensity
@@ -89,7 +89,7 @@ Color intensity
 
 ### 3.2. Correlations after Clustering
 It was examinated how color intensity is related to the rest of the studied characteristics, both for the entire dataset and for each of the determined clusters. <br>
-In the overall dataset, it is observed that color intensity is primarily correlated with the alcohol content in the wine. The correlation coefficient did not show a high value for the total amount of phenols and flavonoids. However, when we repeat this analysis while discriminating by cluster, it is observed that wines corresponding to cluster 0 exhibit the highest correlation with phenol content, particularly with flavonoids. Analyzing the records of cluster 1, although they do not show such a strong correlation, it can be seen in the scatter plot that they follow the trend of cluster 0. In the case of cluster 2, the strong correlation with color intensity occurs with the content of Proanthocyanins and not with the content of flavonoids.
+In the overall dataset, it is observed that color intensity is primarily correlated with the alcohol content in the wine. The correlation coefficient did not show a high value for the total amount of phenols and flavanoids. However, when we repeat this analysis while discriminating by cluster, it is observed that wines corresponding to cluster 0 exhibit the highest correlation with phenol content, particularly with flavanoids. Analyzing the records of cluster 1, although they do not show such a strong correlation, it can be seen in the scatter plot that they follow the trend of cluster 0. In the case of cluster 2, the strong correlation with color intensity occurs with the content of Proanthocyanins and not with the content of flavanoids.
 
 ## 4. Conclusions
 1. Data Exploration: The dataset demonstrated good quality, lacking missing or erroneous values. Correlation analysis highlighted key relationships, such as the positive correlation between alcohol and Proline, and the negative correlation between hue and malic acid.
@@ -97,7 +97,7 @@ In the overall dataset, it is observed that color intensity is primarily correla
 2. Clustering Analysis: Unsupervised clustering using K-means revealed three distinct clusters, confirmed by hierarchical clustering. Each cluster exhibited unique properties, notably varying in alcohol, phenols, flavonoids, and color intensity.
 
 3. Insights
-Exploring color intensity revealed its primary correlation with alcohol in the overall dataset. However, cluster analysis uncovered unique patterns, with Cluster 0 showing a strong correlation with phenols (especially flavonoids), Cluster 1 following a similar trend, and Cluster 2 correlating strongly with Proanthocyanins.
+Exploring color intensity revealed its primary correlation with alcohol in the overall dataset. However, cluster analysis uncovered unique patterns, with Cluster 0 showing a strong correlation with phenols (especially flavanoids), Cluster 1 following a similar trend, and Cluster 2 correlating strongly with Proanthocyanins.
 
 In summary, this project successfully unveiled hidden profiles within wine data, offering valuable insights into the dataset's relationships and patterns.
 
