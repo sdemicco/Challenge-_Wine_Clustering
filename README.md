@@ -123,4 +123,21 @@ The analysis includes:
 A simple REST API was developed and deployed with Render. Through this API, the script inside the container can access data via a request.
 ENDPOINT = "https://wine-data.onrender.com/wine"
 
+### Technologies and Tools
+
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![Seaborn](https://img.shields.io/badge/Seaborn-3792CB?style=for-the-badge&logo=python&logoColor=white)](https://seaborn.pydata.org/)
+[![Matplotlib](https://img.shields.io/badge/Matplotlib-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://matplotlib.org/)
+[![Machine Learning](https://img.shields.io/badge/Machine_Learning-F49A05?style=for-the-badge&logo=python&logoColor=white)](https://scikit-learn.org/)
+[![Scikit Learn](https://img.shields.io/badge/Scikit_Learn-F49A05?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![Random Forests](https://img.shields.io/badge/Random_Forests-4F4F4F?style=for-the-badge&logo=python&logoColor=white)](https://en.wikipedia.org/wiki/Random_forest)
+[![Bagging](https://img.shields.io/badge/Bagging-2E8B57?style=for-the-badge&logo=python&logoColor=white)](https://en.wikipedia.org/wiki/Bootstrap_aggregating)
+[![Boosting](https://img.shields.io/badge/Boosting-FFD700?style=for-the-badge&logo=python&logoColor=white)](https://en.wikipedia.org/wiki/Boosting_(machine_learning))
+[![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+
+
+
+
 
