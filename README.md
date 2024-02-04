@@ -39,6 +39,8 @@ The following results were obtained:
 
 ## 3. Clustering Analysis
 
+:point_right: [Notebook Analisis Exploratorio y modelo](Notebooks/wines_EDA.ipynb)
+
 With the aim of grouping wines with similar characteristics, unsupervised clustering models were implemented. First K-means algorithm was implemented, which requires the prior definition of the number of groups.
 
 To define it, the elbow rule was applied, identifying the inflection point on the inertia curve (sum of squared distances to the centroids) versus the number of clusters (k). It was determined that 3 clusters were optimal. This value was validated using Silhouette and Calinski-Harabasz metrics. As a result of this model, wines could be divided into three families, each with different properties.
@@ -107,6 +109,7 @@ In summary, this project successfully unveiled hidden profiles within wine data,
 ## 5 Containerization and Data Retrieval:
 
 ### Containerization
+:point_right: [readme containerization](Notebooks/wines_EDA.ipynb)
 
 A Docker image was generated to execute a Python script that performs an analysis, returning the following information:
 
