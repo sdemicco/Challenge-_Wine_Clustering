@@ -131,11 +131,11 @@ ENDPOINT = "https://wine-data.onrender.com/wine"
 [![Matplotlib](https://img.shields.io/badge/Matplotlib-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://matplotlib.org/)
 [![Machine Learning](https://img.shields.io/badge/Machine_Learning-F49A05?style=for-the-badge&logo=python&logoColor=white)](https://scikit-learn.org/)
 [![Scikit Learn](https://img.shields.io/badge/Scikit_Learn-F49A05?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
-[![Random Forests](https://img.shields.io/badge/Random_Forests-4F4F4F?style=for-the-badge&logo=python&logoColor=white)](https://en.wikipedia.org/wiki/Random_forest)
-[![Bagging](https://img.shields.io/badge/Bagging-2E8B57?style=for-the-badge&logo=python&logoColor=white)](https://en.wikipedia.org/wiki/Bootstrap_aggregating)
-[![Boosting](https://img.shields.io/badge/Boosting-FFD700?style=for-the-badge&logo=python&logoColor=white)](https://en.wikipedia.org/wiki/Boosting_(machine_learning))
 [![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/)
 [![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+![VSCODE](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
+![FAST_API](	https://img.shields.io/badge/fastapi-109989?style=for-the-badge&logo=FASTAPI&logoColor=white)<br>
+![render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
 
 
 
