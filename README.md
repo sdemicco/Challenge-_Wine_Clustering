@@ -109,14 +109,14 @@ In summary, this project successfully unveiled hidden profiles within wine data,
 ## 5 Containerization and Data Retrieval:
 
 ### Containerization
+A Dockerfile and necessary configurations to build a Docker image were developed.<br> 
 :point_right: [readme containerization](DockerImage/README.md)
 
-A Docker image was generated to execute a Python script that performs an analysis, returning the following information:
-
+The analysis includes:
 :white_check_mark: Number of rows and columns in the dataset<br>
 :white_check_mark: Number of null values<br>
 :white_check_mark: Columns correlated with a correlation coefficient higher than 0.5<br>
-:white_check_mark: K-Means Clustering : DataFrame with mean values of the features for each cluster<br>
+:white_check_mark: K-Means Clustering : Features mean values for each cluster<br>
 
 ### Data Retrieval
 :point_right: [main.py fastAPI](main.py)<br>
