@@ -88,8 +88,8 @@ Color intensity
 
 
 ### 3.2. Correlations after Clustering
-It was examinated how color intensity is related to the rest of the studied characteristics, both for the entire dataset and for each of the determined clusters. <br>
-In the overall dataset, it is observed that color intensity is primarily correlated with the alcohol content in the wine. The correlation coefficient did not show a high value for the total amount of phenols and flavanoids. However, when we repeat this analysis while discriminating by cluster, it is observed that wines corresponding to cluster 0 exhibit the highest correlation with phenol content, particularly with flavanoids. Analyzing the records of cluster 1, although they do not show such a strong correlation, it can be seen in the scatter plot that they follow the trend of cluster 0. In the case of cluster 2, the strong correlation with color intensity occurs with the content of Proanthocyanins and not with the content of flavanoids.
+The relationship between color intensity and the other studied characteristics was examined, both for the entire dataset and for each of the determined clusters. <br>
+In the overall dataset, it is observed that color intensity is primarily correlated with the alcohol content in the wine. The correlation coefficient did not show a high value for the total amount of phenols and flavonoids. However, when we repeat this analysis while discriminating by cluster, it is observed that wines corresponding to cluster 0 exhibit the highest correlation with phenol content, particularly with flavonoids. Analyzing the records of cluster 1, although they do not show such a strong correlation, a scatter plot revealed they followed the trend of cluster 0. In the case of cluster 2, the strong correlation with color intensity occurs with the content of Proanthocyanidins and not with the content of flavonoids.
 
 ## 4. Conclusions
 1. Data Exploration: The dataset demonstrated good quality, lacking missing or erroneous values. Correlation analysis highlighted key relationships, such as the positive correlation between alcohol and Proline, and the negative correlation between hue and malic acid.
