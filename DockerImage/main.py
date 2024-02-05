@@ -91,25 +91,3 @@ for dictionary in dictionaries_per_row:
     print(dictionary)
 
 
-
-'''
-#modelo clustering Kmeans
-k = 3
-km = KMeans(n_clusters=k, random_state=0)
-km.fit(X)
-df_wine_label=df_wine.copy()
-
-# Agregar una nueva columna 'Cluster' al DataFrame original
-labels_kmeans= km.labels_
-df_wine_label['Cluster'] = labels_kmeans 
-df_wine_label_gropued=df_wine_label.groupby('Cluster').mean()
-diccionarios_por_fila = [dict(zip(df_wine_label_gropued.columns, row)) for _, row in df_wine_label_gropued.iterrows()]
-
-# Imprimir los diccionarios
-print('CARACTERISTICAS PROMEDIO DE CADA CLUSTER')
-n=-1
-for diccionario in diccionarios_por_fila:
-    n=n+1
-    print('cluster',n)
-    print(diccionario)
-'''
