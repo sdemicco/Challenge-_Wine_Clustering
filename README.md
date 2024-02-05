@@ -124,7 +124,6 @@ The container enables the execution of all the code to perform the following ana
 :white_check_mark: K-Means Clustering : Features mean values for each cluster<br>
 
 then displays the results in the terminal.
-
 ### Data Retrieval
 :point_right: [main.py fastAPI](main.py)<br>
 A simple REST API was developed and deployed with Render. Through this API, the script inside the container can access data via a request.
