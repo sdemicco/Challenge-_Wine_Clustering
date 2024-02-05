@@ -2,75 +2,114 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
-from sklearn.metrics import silhouette_score,calinski_harabasz_score,classification_report,confusion_matrix
-import warnings
 from requests import get
+import json
 
-warnings.filterwarnings("ignore", category=FutureWarning, module="sklearn.cluster._kmeans")
-warnings.filterwarnings("ignore", category=UserWarning, module="joblib.externals.loky.backend.context")
 
 # read data
 ENDPOINT = "https://wine-data.onrender.com/wine"
 response = get(ENDPOINT)
 df_wine=pd.datos = pd.read_json(response.json())
+
+
+# Calculate and print data exploration
 print('')
-print("cantidad de filas: " + str(df_wine.shape[0]))
-print("cantidad de columnas: " + str(df_wine.shape[1]))
 print('')
-# cantidad de nulos
+print('DATASET EXPLORATION')
+print('-----------------------')
+print("Number of rows: " + str(df_wine.shape[0]))
+print("Number of columns: " + str(df_wine.shape[1]))
+print("Number of missing values: " + str(df_wine.isna().sum().sum()))
+
+
+ # Print column pairs with correlation greater than 0.5
 print('')
-print ("cantidad de valores nulos: " + str(df_wine.isna().sum().sum()))
+print("COLUMNS CORRELATED WITH COEFFICIENT GREATER THAN 0.5:")
+print('-----------------------')
 
-#parametros correlacionados
-def calcular_y_mostrar_correlacion(df):
-    # Calcular la matriz de correlación
-    matriz_correlacion = df.corr()
+def calculate_and_show_correlation(df):
+    # Calculate the correlation matrix
+    correlation_matrix = df.corr('spearman')
 
-    # Inicializar una lista para almacenar los pares (índice, columna, valor)
-    pares_correlacion = []
+    # Initialize a list to store the pairs (index, column, value)
+    correlation_pairs = []
 
-    # Recorrer la matriz de correlación
-    for indice_fila_1 in matriz_correlacion.index:
-        for indice_columna_1 in matriz_correlacion.columns:
-            valor_correlacion_1 = matriz_correlacion.loc[indice_fila_1, indice_columna_1]
+    # Iterate through the correlation matrix
+    for index_row_1 in correlation_matrix.index:
+        for index_column_1 in correlation_matrix.columns:
+            correlation_value_1 = correlation_matrix.loc[index_row_1, index_column_1]
 
-            # Evaluar la condición (mayor a 0.5)
-            if abs(valor_correlacion_1) > 0.5 and abs(valor_correlacion_1) < 1.0:
+            # Evaluate the condition (greater than 0.5)
+            if 0.5 < abs(correlation_value_1) < 1.0:
 
-                # Verificar si ya existe un par con los mismos elementos en la lista
-                existe_par = False
-                for par in pares_correlacion:
-                    indice_fila_2, indice_columna_2, valor_correlacion_2 = par
-                    if (indice_fila_1 == indice_fila_2 and indice_columna_1 == indice_columna_2) or \
-                       (indice_fila_1 == indice_columna_2 and indice_columna_1 == indice_fila_2):
-                        existe_par = True
+                # Check if a pair with the same elements already exists in the list
+                pair_exists = False
+                for pair in correlation_pairs:
+                    index_row_2, index_column_2, correlation_value_2 = pair
+                    if (index_row_1 == index_row_2 and index_column_1 == index_column_2) or \
+                       (index_row_1 == index_column_2 and index_column_1 == index_row_2):
+                        pair_exists = True
                         break
 
-                # Si no existe un par con los mismos elementos, agregar a la lista
-                if not existe_par:
-                    pares_correlacion.append([indice_fila_1, indice_columna_1, valor_correlacion_1])
+                # If there is no pair with the same elements, add to the list
+                if not pair_exists:
+                    correlation_pairs.append([index_row_1, index_column_1, correlation_value_1])
 
-    # Imprimir los pares de columnas y sus valores de correlación
-    print('')
-    print("Pares de columnas con correlación mayor a 0.5 (excluyendo 1.0):")
-    for par in pares_correlacion:
-        print(f"{par[0]} - {par[1]}: {par[2]}")
+    # Print the correlation pairs
+    for pair in correlation_pairs:
+        print(f"{pair[0]} - {pair[1]}: {pair[2]}")
 
-# Ejemplo de uso con tu DataFrame df_wine
-calcular_y_mostrar_correlacion(df_wine)
+calculate_and_show_correlation(df_wine)
 
-#Escalado de datos
+
+print('')
+print("MODELO CLUSTERING KMEANS")
+print('-----------------------')
+
+#Data Scaling
 scaler=StandardScaler()
 X=scaler.fit_transform(df_wine)
 
+# Kmeans clustering model
+k = 3
+km = KMeans(n_clusters=k, random_state=0)
+km.fit(X)
+df_wine_label = df_wine.copy()
+
+# Add a new column 'Cluster' to the original DataFrame
+labels_kmeans = km.labels_
+df_wine_label['Cluster'] = labels_kmeans 
+df_wine_label_grouped = df_wine_label.groupby('Cluster').mean().round(2)
+dictionaries_per_row = [dict(zip(df_wine_label_grouped.columns, row)) for _, row in df_wine_label_grouped.iterrows()]
+
+# Print the dictionaries
+print('AVERAGE CHARACTERISTICS OF EACH CLUSTER')
+n = -1
+for dictionary in dictionaries_per_row:
+    n = n + 1
+    print('cluster', n)
+    print(dictionary)
+
+
+
+'''
 #modelo clustering Kmeans
 k = 3
 km = KMeans(n_clusters=k, random_state=0)
 km.fit(X)
 df_wine_label=df_wine.copy()
+
 # Agregar una nueva columna 'Cluster' al DataFrame original
 labels_kmeans= km.labels_
 df_wine_label['Cluster'] = labels_kmeans 
 df_wine_label_gropued=df_wine_label.groupby('Cluster').mean()
-print('')
-print(df_wine_label_gropued)
+diccionarios_por_fila = [dict(zip(df_wine_label_gropued.columns, row)) for _, row in df_wine_label_gropued.iterrows()]
+
+# Imprimir los diccionarios
+print('CARACTERISTICAS PROMEDIO DE CADA CLUSTER')
+n=-1
+for diccionario in diccionarios_por_fila:
+    n=n+1
+    print('cluster',n)
+    print(diccionario)
+'''
