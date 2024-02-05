@@ -26,10 +26,10 @@ The following results were obtained:
 
 
 > ####  The content of Alcohol and Proline are positively correlated. As the alcohol content in a wine increases, the Proline content also increases.
-> #### The hue is negatively correlated with malic acid and positively correlated with flavanoids. Wines with lower values of malic acid and higher values of flavanoids exhibit higher hues.
-> #### Total_phenols is strongly correlated with Flavonoids and Proanthocyanins, which is expected since Flavonoids and Proanthocyanins are included in the total_phenols category.
+> #### The hue is negatively correlated with Malic acid and positively correlated with Flavanoids. Wines with lower values of Malic acid and higher values of Flavanoids exhibit higher hues.
+> #### Total_phenols are strongly correlated with Flavanoids and Proanthocyanins, which is expected since Flavanoids and Proanthocyanins are included in the total_phenols category.
 > #### The color intensity is positively correlated with the alcohol content of the wine. There is also a negative correlation between the color intensity of the wine and its hue. Wines with more intense colors have lower hue.
-> #### The OD280 is strongly correlated with flavanoid phenolic compounds. Also Wines with higher hues have a higher OD280 coefficient.
+> #### The OD280 is strongly correlated with Flavanoid phenolic compounds. Also Wines with higher hues have a higher OD280 coefficient.
 
 <!-- Imagen redimensionada centrada con estilos en línea -->
 <p align="center">
@@ -41,7 +41,7 @@ The following results were obtained:
 
 :point_right: [Notebook](Notebooks/wines_EDA.ipynb)
 
-With the aim of grouping wines with similar characteristics, unsupervised clustering models were implemented. First K-means algorithm was implemented, which requires the prior definition of the number of groups.
+With the aim of grouping wines with similar characteristics, unsupervised clustering models were used. First K-means algorithm was implemented, which requires the prior definition of the number of groups.
 
 To define it, the elbow rule was applied, identifying the inflection point on the inertia curve (sum of squared distances to the centroids) versus the number of clusters (k). It was determined that 3 clusters were optimal. This value was validated using Silhouette and Calinski-Harabasz metrics. As a result of this model, wines could be divided into three families, each with different properties.
 
@@ -93,7 +93,7 @@ Color intensity
 
 ### 3.2. Correlations after Clustering
 The relationship between color intensity and the other studied characteristics was examined, both for the entire dataset and for each of the determined clusters. <br>
-In the overall dataset, it is observed that color intensity is primarily correlated with the alcohol content in the wine. The correlation coefficient did not show a high value for the total amount of phenols and flavonoids. However, when we repeat this analysis while discriminating by cluster, it is observed that wines corresponding to cluster 0 exhibit the highest correlation with phenol content, particularly with flavonoids. Analyzing the records of cluster 1, although they do not show such a strong correlation, a scatter plot revealed they followed the trend of cluster 0. In the case of cluster 2, the strong correlation with color intensity occurs with the content of Proanthocyanidins and not with the content of flavonoids.
+In the overall dataset, it is observed that color intensity is primarily correlated with the alcohol content in the wine. The correlation coefficient did not show a high value for the total amount of phenols and Flavanoids. However, when we repeat this analysis while discriminating by cluster, it is observed that wines corresponding to cluster 0 exhibit the highest correlation with phenol content, particularly with Flavanoids. Analyzing the records of cluster 1, although they do not show such a strong correlation, a scatter plot revealed they followed the trend of cluster 0. In the case of cluster 2, the strong correlation with color intensity occurs with the content of Proanthocyanidins and not with the content of Flavanoids.
 
 <p align="center">
   <img src="assets/scatterPlot_img.png" alt="scatter">
@@ -103,7 +103,7 @@ In the overall dataset, it is observed that color intensity is primarily correla
 ## 4. Conclusions
 1. Data Exploration: The dataset demonstrated good quality, lacking missing or erroneous values. Correlation analysis highlighted key relationships, such as the positive correlation between alcohol and Proline, and the negative correlation between hue and malic acid.
 
-2. Clustering Analysis: Unsupervised clustering using K-means revealed three distinct clusters, confirmed by hierarchical clustering. Each cluster exhibited unique properties, notably varying in alcohol, phenols, flavonoids, and color intensity.
+2. Clustering Analysis: Unsupervised clustering using K-means revealed three distinct clusters, confirmed by hierarchical clustering. Each cluster exhibited unique properties, notably varying in alcohol, phenols, Flavanoids, and color intensity.
 
 3. Insights
 Exploring color intensity revealed its primary correlation with alcohol in the overall dataset. However, cluster analysis uncovered unique patterns, with Cluster 0 showing a strong correlation with phenols (especially flavanoids), Cluster 1 following a similar trend, and Cluster 2 correlating strongly with Proanthocyanins.
@@ -114,13 +114,13 @@ In summary, this project successfully unveiled hidden profiles within wine data,
 ## 5 Containerization and Data Retrieval:
 
 ### Containerization
-A Dockerfile and necessary configurations to build a Docker image were developed.<br> 
+In order to containeizar the analisis a Dockerfile and necessary configurations  were developed.<br> 
 :point_right: [readme containerization](DockerImage/README.md)
 
 The analysis includes:<br>
 :white_check_mark: Number of rows and columns in the dataset<br>
 :white_check_mark: Number of null values<br>
-:white_check_mark: Columns correlated with a correlation coefficient higher than 0.5<br>
+:white_check_mark: Correlations with coefficient higher than 0.5<br>
 :white_check_mark: K-Means Clustering : Features mean values for each cluster<br>
 
 ### Data Retrieval
